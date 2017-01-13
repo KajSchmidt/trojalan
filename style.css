@@ -1,0 +1,89 @@
+/*### Struktur ###*/
+html, body {
+  margin: 0;
+  padding:0;
+}
+
+nav {
+  position: fixed;
+  min-width: 20vw;
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  background-color: #111111;
+}
+
+article {
+  margin-left:20vw;
+}
+
+section {
+  min-height: 100vh;
+  margin: 20px;
+}
+
+header.logotyp {
+  min-height: 100vh;
+}
+
+header.divider {
+  min-height: 10vh;
+}
+
+footer {
+  min-height: 100vh;
+}
+/*### Färg, typografi och bakgrundsbilder ###*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Dosis', sans-serif;
+}
+
+div.sidebar {
+  height: 25vh;
+  color:#ffffff;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 25vh;
+  background-position: center;
+  background-size: cover;
+  font-size: 2em;
+}
+
+#sidefield1 {
+  background-image: url('img/img1.jpg');
+
+}
+
+#sidefield2 {
+  background-image: url('img/img2.jpg');
+
+}
+
+#sidefield3 {
+  background-image: url('img/img3.jpg');
+
+}
+
+#sidefield4 {
+  background-image: url('img/img4.jpg');
+
+}
+
+header.divider {
+  background-position: center;
+  background-size: cover;
+  background-image: url('img/img1.jpg');
+}
+
+footer {
+  background-color: #111111;
+}
