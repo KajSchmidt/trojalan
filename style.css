@@ -1,89 +1,167 @@
+/*### Responsivt ###*/
+
+
+
+
+@media screen and (max-width: 849px) {
+  nav {
+    min-width: 250px;
+    margin-left: -220px;
+  }
+
+  article {
+    margin-left: 30px;
+  }
+
+  #gradient {
+    margin-left: 30px;
+  }
+  .wide {
+    display: none;
+  }
+  .narrow {
+    display: inherit;
+  }
+}
+
+
+@media screen and (min-width: 850px) {
+  nav {
+    min-width: 30vw;
+    margin-left:0;
+  }
+
+  article {
+    margin-left: 30vw;
+    min-width: 70vw;
+  }
+
+  #gradient {
+    margin-left: 30vw;
+  }
+
+  .wide {
+    display: inherit;
+  }
+  .narrow {
+    display:none;
+  }
+}
+
 /*### Struktur ###*/
 html, body {
   margin: 0;
   padding:0;
+  background-image: url('img/bg.png');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 nav {
   position: fixed;
-  min-width: 20vw;
   min-height:100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  align-content: stretch;
   background-color: #111111;
 }
 
-article {
-  margin-left:20vw;
+
+img.sidebar {
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+img.logotyp {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20%;
+}
+
+#gradient {
+  position: fixed;
+  min-width: 5px;
+  min-height:100vh;
+  background-image: url('img/grad1.jpg');
+  background-size: cover;
+  animation-name: gradient;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes gradient {
+    from {background-position: 0%;}
+    to {background-position: 100%;}
 }
 
 section {
   min-height: 100vh;
-  margin: 20px;
+  width: 100%;
+  padding-top:50px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 header.logotyp {
   min-height: 100vh;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
-header.divider {
-  min-height: 10vh;
-}
 
 footer {
   min-height: 100vh;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
+
+
 /*### Färg, typografi och bakgrundsbilder ###*/
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color:#ffffff;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Dosis', sans-serif;
 }
 
-div.sidebar {
-  height: 25vh;
-  color:#ffffff;
-  text-align: center;
-  font-family: 'VT323', monospace;
-  text-transform: uppercase;
-  vertical-align: middle;
-  line-height: 25vh;
-  background-position: center;
-  background-size: cover;
-  font-size: 2em;
-}
 
-#sidefield1 {
-  background-image: url('img/img1.jpg');
-
-}
-
-#sidefield2 {
-  background-image: url('img/img2.jpg');
-
-}
-
-#sidefield3 {
-  background-image: url('img/img3.jpg');
-
-}
-
-#sidefield4 {
-  background-image: url('img/img4.jpg');
-
-}
-
-header.divider {
-  background-position: center;
-  background-size: cover;
-  background-image: url('img/img1.jpg');
-}
-
-footer {
+nav {
+  padding-top: 10vh;
   background-color: #111111;
+}
+
+ul.sidebar {
+  margin:0;
+  padding: 0;
+  width: 100%;
+}
+
+li.sidebar {
+  list-style: none;
+  width: 100%
+}
+
+a.sidebar, a.sidebar:hover {
+  line-height: 2em;
+  letter-spacing:0.8em;
+  text-decoration: none;
+  color:#ffffff;
+  font-size: 1em;
+  font-family: 'Ubuntu Mono', monospace;
+  text-transform: uppercase;
+}
+
+li.sidebar:hover {
+  background-color: #ff0000;
+}
+
+
+li.logotyp {
+  list-style: none;
+  width: 100%;
+  text-align: center;
 }
