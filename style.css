@@ -173,7 +173,7 @@ img.navbarm {
   position: fixed;
   width: 5px;
   min-height:100vh;
-  margin-left: 30vw;
+  margin-left: 30%;
   animation-name: gradient-h;
 }
 
