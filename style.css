@@ -4,61 +4,64 @@
 
 
 @media screen and (max-width: 849px) {
-  nav {
-    min-width: 250px;
-    margin-left: -220px;
+  nav.sidebar {
+    display: none;
+  }
+
+  nav.navbarm {
+    display: block;
   }
 
   article {
-    margin-left: 30px;
+    margin-left: 0;
+    width: 100%;
   }
 
-  #gradient {
-    margin-left: 30px;
-  }
-  .wide {
+  #sidebar-gradient {
     display: none;
-  }
-  .narrow {
-    display: inherit;
   }
 }
 
 
 @media screen and (min-width: 850px) {
   nav {
-    min-width: 30vw;
-    margin-left:0;
+    display: block;
+  }
+
+  nav.navbarm {
+    display: none;
   }
 
   article {
-    margin-left: 30vw;
-    min-width: 70vw;
+    margin-left: 30%;
+    width: 70%;
   }
 
-  #gradient {
-    margin-left: 30vw;
+  #sidebar-gradient {
+    display: block;
   }
 
-  .wide {
-    display: inherit;
-  }
-  .narrow {
-    display:none;
-  }
 }
 
-/*### Struktur ###*/
+
 html, body {
   margin: 0;
   padding:0;
   background-image: url('img/bg.png');
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
+  font-family: 'Open Sans', sans-serif;
+  color:#ffffff;
 }
 
-nav {
+/*   Sidebar   */
+
+nav.sidebar {
   position: fixed;
+  min-width: 30%;
+  margin-left:0;
+  height: 100vh;
   min-height:100vh;
   background-color: #111111;
 }
@@ -67,70 +70,12 @@ nav {
 img.sidebar {
   width: 150px;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-img.logotyp {
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 20%;
-}
-
-#gradient {
-  position: fixed;
-  min-width: 5px;
-  min-height:100vh;
-  background-image: url('img/grad1.jpg');
-  background-size: cover;
-  animation-name: gradient;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
-/* The animation code */
-@keyframes gradient {
-    from {background-position: 0%;}
-    to {background-position: 100%;}
-}
-
-section {
-  min-height: 100vh;
-  width: 100%;
-  padding-top:50px;
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-header.logotyp {
-  min-height: 100vh;
-  width: 100%;
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-
-footer {
-  min-height: 100vh;
-  width: 100%;
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-
-/*### Färg, typografi och bakgrundsbilder ###*/
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color:#ffffff;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Dosis', sans-serif;
-}
-
-
-nav {
-  padding-top: 10vh;
+nav.sidebar {
+  padding-top: 10%;
   background-color: #111111;
 }
 
@@ -160,8 +105,149 @@ li.sidebar:hover {
 }
 
 
-li.logotyp {
+
+
+
+/*   Slut Sidebar    */
+
+
+/*   Navbar   */
+
+nav.navbarm {
+  min-width: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  margin-top: -140px;
+  padding: 0;
+  z-index: 100;
+  background-color: #111111;
+  transition: margin-top 0.3s ease;
+  border-bottom:thin solid purple;
+}
+
+nav.navbarm:hover {
+  margin-top: 0;
+}
+
+ul.navbarm {
+  margin:0;
+  padding: 0;
+  width: 100%;
+}
+
+li.navbarm {
   list-style: none;
+  margin: 0;
+  width: 100%
+}
+
+a.navbarm, a.navbarm:hover {
+  line-height: 2em;
+  letter-spacing:0.8em;
+  text-decoration: none;
+  color:#ffffff;
+  font-size: 1em;
+  font-family: 'Ubuntu Mono', monospace;
+  text-transform: uppercase;
+}
+
+li.navbarm:hover {
+  background-color: #ff0000;
+}
+
+img.navbarm {
+  width: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*   Slut Navbar   */
+
+
+/* Gradient */
+#sidebar-gradient {
+  background-image: url('img/grad1.jpg');
+  position: fixed;
+  width: 5px;
+  min-height:100vh;
+  margin-left: 30vw;
+  animation-name: gradient-h;
+}
+
+#navbar-gradient {
+  background-image: url('img/grad2.jpg');
+  position: absolute;
+  width: 100%;
+  height:5px;
+  bottom: 0;
+  animation-name: gradient-v;
+}
+
+
+.gradient {
+  background-size: cover;
+
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* Animation */
+@keyframes gradient-h {
+    from {background-position: 0%;}
+    to {background-position: 100%;}
+}
+
+@keyframes gradient-v {
+    from {background-position: 0% 0%;}
+    to {background-position: 0% 100%;}
+}
+
+
+/* Slut gradient */
+
+img.logotyp {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10%;
+}
+
+
+article {
+
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  padding-top:50px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+header.logotyp {
+  min-height: 100vh;
   width: 100%;
   text-align: center;
+}
+
+
+footer {
+  min-height: 100vh;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+img.footer {
+  width: 90%;
+}
+
+
+
+h1, h2, h3, h4 {
+  font-family: 'Dosis', sans-serif;
 }

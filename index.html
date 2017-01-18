@@ -27,34 +27,39 @@
 </head>
 <body>
 
-<nav>
+<nav class="sidebar">
 
-  <ul class="sidebar wide">
-    <li class="logotyp"><img class="sidebar" src="img/trojalan.png"></li>
+  <ul class="sidebar">
+    <a href="#start" class="sidebar"><li class="logotyp text-center"><img class="sidebar" src="img/trojalan.png"></li></a>
     <a href="#information" class="sidebar"><li class="sidebar text-center">Information</li></a>
     <a href="#boka" class="sidebar"><li class="sidebar text-center">Anmälan</li></a>
     <a href="#turneringar" class="sidebar"><li class="sidebar text-center">Turneringar</li></a>
     <a href="#sponsorer" class="sidebar"><li class="sidebar text-center">Sponsorer</li></a>
+    <a href="#sponsorer" class="sidebar" target="_blank"><li class="sidebar text-center">Facebook</li></a>
   </ul>
-
-
-  <ul class="sidebar narrow">
-    <a href="#information" class="sidebar"><li class="sidebar text-right">I</li></a>
-    <a href="#boka" class="sidebar"><li class="sidebar text-right">A</li></a>
-    <a href="#turneringar" class="sidebar"><li class="sidebar text-right">T</li></a>
-    <a href="#sponsorer" class="sidebar"><li class="sidebar text-right">S</li></a>
-  </ul>
-
-
 
 </nav>
-<div id="gradient">
+<div id="sidebar-gradient" class="gradient">
   &nbsp;
 </div>
-<article>
 
-  <header class="logotyp">
-    <img class="logotyp" src="img/trojalan.png">
+<nav class="navbarm">
+  <ul class="navbarm">
+    <a href="#information" class="navbarm"><li class="navbarm text-center">Information</li></a>
+    <a href="#boka" class="navbarm"><li class="navbarm text-center">Anmälan</li></a>
+    <a href="#turneringar" class="navbarm"><li class="navbarm text-center">Turneringar</li></a>
+    <a href="#sponsorer" class="navbarm"><li class="navbarm text-center">Sponsorer</li></a>
+    <a href="#sponsorer" class="navbarm" target="_blank"><li class="navbarm text-center">Facebook</li></a>
+    <li class="navbarm text-center" id="toggle-navbarm"><img class="navbarm" src="img/menu.svg"></li>
+  </ul>
+  <div id="navbar-gradient" class="gradient">
+    &nbsp;
+  </div>
+</nav>
+
+<article>
+  <header class="logotyp" id="start">
+    <img class="logotyp" src="img/trojalan_text.png">
   </header>
 
   <section id="information">
@@ -79,7 +84,7 @@
 
   <section id="sponsorer">
       <h1>Sponsorer</h1>
-    <a href="http://ntigymnasiet.se/umea"><img class="footer" src="img/nti_elev_blue.png"></a>
+    <a href="http://ntigymnasiet.se/umea" target="_blank"><img class="footer" src="img/nti_elev_blue.png"></a>
   </section>
 
 </article>
