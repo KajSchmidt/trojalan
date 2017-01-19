@@ -208,6 +208,25 @@ img.navbarm {
 
 /* Slut gradient */
 
+
+/* Sponsorer */
+
+
+div.sponsor-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+img.sponsor-row {
+  width: 100px;;
+}
+
+
+/* Slut Sponsorer   */
+
 img.logotyp {
   width: 60%;
   margin-left: 20%;
@@ -240,10 +259,6 @@ footer {
   width: 100%;
   padding-left: 20%;
   padding-right: 20%;
-}
-
-img.footer {
-  width: 90%;
 }
 
 
