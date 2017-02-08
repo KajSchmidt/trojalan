@@ -227,6 +227,10 @@ img.sponsor-row {
 
 /* Slut Sponsorer   */
 
+img.big-img {
+  width: 100%;
+}
+
 img.logotyp {
   width: 60%;
   margin-left: 20%;
